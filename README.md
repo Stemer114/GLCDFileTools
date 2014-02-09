@@ -24,6 +24,17 @@ at least on every linux system, and the installation
 is easy via CPAN shell.
 
 
+TOOL OVERVIEW
+=============
+
+ `bin2hex.pl` - convert a binary file into a c array
+
+ `bindump.pl` - display a hexdump of a binary file
+
+ `bmpinfo.pl` - display information on a bmp file
+
+
+
 INSTALLATION
 ============
 
@@ -31,13 +42,17 @@ copy or clone the repo to a location of your choice.
 
 The following perl modules are required:
 
-File::Slurp;
+```
+File::Slurp
 Data::Hexdumper
 Image::BMP
+```
+
 
 Installation of these modules takes only a few seconds using the CPAN shell
 which is part of most perl installations:
 
+```
  perl -MCPAN -e shell (opens CPAN shell)
  
  install File::Slurp
@@ -45,6 +60,7 @@ which is part of most perl installations:
  install Image::BMP
 
  exit
+```
 
 Finally, make the perl scripts executable, if required (chmod u+x __.pl)
 
@@ -52,7 +68,7 @@ Finally, make the perl scripts executable, if required (chmod u+x __.pl)
 USAGE: bin2hex.pl
 =================
 
- bin2hex.pl filename.bmp test > test.c
+`bin2hex.pl filename.bmp test > test.c`
 
 Will read in the binary file test.bmp and create a C file test.c
 which will contain a C array named test with a hexdump of the contents
@@ -78,7 +94,7 @@ Generally, it should work with larger files as well, e.g. ogg files or similiar.
 USAGE: bindump.pl
 =================
 
- ./bindump.pl test.bmp
+` ./bindump.pl test.bmp`
 
 Will print a 16 column hexdump with leading address column and trailing ASCII
 column.
@@ -89,6 +105,7 @@ Useful for analysing bmp files and for debugging purposes.
 USAGE: bmpinfo.pl
 =================
 
+```
 user@host:~/utilities$ ./bmpinfo.pl minimize.bmp 
 BMP: minimize.bmp
 Image: 24/16777216 colors. Geometry: 16x14 672 [comp: 0]
@@ -121,20 +138,11 @@ XpixelsPerM: 0
 YpixelsPerM: 0 
 ColorsUsed: 16777216 
 ColorsImportant: 0 
+```
 
 Will display both a simplified ASCII representation of the bmp file
 and file information. Most LCD libraries for uCs require 24bpp bmps
 so you can check you bmp if it fits.
-
-
-TOOL OVERVIEW
-=============
-
- bin2hex.pl - convert a binary file into a c array
-
- bindump.pl - display a hexdump of a binary file
-
- bmpinfo.pl - display information on a bmp file
 
 
 
