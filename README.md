@@ -23,7 +23,7 @@ were easy to use.
 
 (There are several windows tools available, though. But
 I haven't touched a windows system outside work for at
-least 20 years..).
+least 15 years..).
 
 The tools use perl, because that's what I know, works
 at least on every linux system, and the installation
