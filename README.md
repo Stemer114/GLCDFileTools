@@ -70,7 +70,7 @@ USAGE: bin2hex.pl
 
 Either dump to terminal:
 
-`bin2hex.pl filename.bmp test > test.c`
+`bin2hex.pl filename.bmp test`
 
 Or dump into C file:
 
