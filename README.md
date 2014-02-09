@@ -11,17 +11,26 @@ When developing a microcontoller application with a graphic LCD,
 but no mass storage, it is often easiest to import image files as 
 c code (c array with hex data).
 
+`bin2hex` converts a binary file into a C file which can be 
+included into your project. `bindump`and `bmpinfo` are 
+utility functions useful for development and debugging.
+
 When starting developing STM32 with linux arm-gcc toolchain
 I was surprised to discover there are no easy to use tools
 available under linux which would allow me to convert bmps
 to a C data structure. At least I have found none which 
 were easy to use.
 
-(There are several windows tools available, though).
+(There are several windows tools available, though. But
+I haven't touched a windows system outside work for at
+least 20 years..).
 
 The tools use perl, because that's what I know, works
 at least on every linux system, and the installation
-is easy via CPAN shell.
+is easy via CPAN shell. In perl, reading a binary and
+dumping it into a C or text file are just a few lines
+of code, if you have the right library. And those are
+just a few commands away, thanks to CPAN.
 
 
 TOOL OVERVIEW
@@ -165,8 +174,8 @@ under the terms of the GNU General Public Licence version 2. The full text of th
 licence can be found in the file LICENSE.
 
 
-THANKS TO
-=========
+THANKS AND CREDITS TO
+=====================
 
 admin_ub from http://mikrocontroller.bplaced.net/wordpress/?page_id=744 for his 
 excellent STM32F4 libraries and infos.
@@ -174,5 +183,13 @@ excellent STM32F4 libraries and infos.
 Elia from http://eliaselectronics.com/stm32f4-tutorials/ for the - IMO - best working and easiest
 to use tutorial on setting up a gcc-based toolchain for STM32 under linux - WITHOUT
 having to use Eclipse for something as simple as coding C for a microcontroller.
+
+Uri Guttman for File::Slurp (http://search.cpan.org/~uri/File-Slurp-9999.19/lib/File/Slurp.pm)
+
+David Cantrell for Data::Hexdumper (http://search.cpan.org/~dcantrell/Data-Hexdumper-3.0001/lib/Data/Hexdumper.pm)
+
+David Ljung Madison for Image::BMP (http://search.cpan.org/~daveola/Image-BMP-1.17/lib/Image/BMP.pm)
+
+
 
 
