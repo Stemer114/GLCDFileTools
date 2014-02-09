@@ -68,12 +68,21 @@ Finally, make the perl scripts executable, if required (chmod u+x __.pl)
 USAGE: bin2hex.pl
 =================
 
+Either dump to terminal:
+
+`bin2hex.pl filename.bmp test > test.c`
+
+Or dump into C file:
+
 `bin2hex.pl filename.bmp test > test.c`
 
 Will read in the binary file test.bmp and create a C file test.c
-which will contain a C array named test with a hexdump of the contents
-of test.bmp and a C structure named test_bmp with a reference to the 
+which will contain a C array named test_Table with a hexdump of the contents
+of test.bmp and a C structure named test with a reference to the 
 array and the number of (relevant) bytes of the array.
+
+Afterwards, simply copy the C file to the img folder within you
+project (e.g. bilder dir within ub_lib).
 
 You can pass bin2hex.pl any binary file you like, it is not especially
 designed for bmp files.
