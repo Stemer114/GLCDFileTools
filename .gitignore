@@ -1,16 +1,39 @@
-blib/
-.build/
-_build/
-cover_db/
-inc/
-Build
-!Build/
-Build.bat
-.last_cover_stats
-Makefile
-Makefile.old
-MANIFEST.bak
-META.yml
-MYMETA.yml
-nytprof.out
-pm_to_blib
+*~
+*swp
+
+# ----------------------------------------------------------------------------
+# avr related files
+.dep
+*.eep
+*.lss
+*.lst
+*.map
+*.sym
+
+# ----------------------------------------------------------------------------
+# C-files
+# source: https://github.com/github/gitignore
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.hex
+
+
