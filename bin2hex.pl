@@ -4,6 +4,14 @@ use File::Slurp;
 use Data::Hexdumper qw(hexdump);
 
 #--------------------------------------------------------------
+# Copyright 2014 Stemer114 <stemer114@gmail.com>
+# https://github.com/Stemer114/GLCDFileTools
+#
+# This software is free-as-in-speech software, and may be used, distributed, and modified 
+# under the terms of the GNU General Public Licence version 2. The full text of the 
+# licence can be found in the file LICENSE.
+#--------------------------------------------------------------
+
 my $usage = qq!
 Usage: ./bin2hex "name of input file" "name of output structure"
 
