@@ -15,15 +15,9 @@ c code (c array with hex data).
 included into your project. `bindump`and `bmpinfo` are 
 utility functions useful for development and debugging.
 
-When starting developing STM32 with linux arm-gcc toolchain
-I was surprised to discover there are no easy to use tools
-available under linux which would allow me to convert bmps
-to a C data structure. At least I have found none which 
-were easy to use.
-
-(There are several windows tools available, though. But
-I haven't touched a windows system outside work for at
-least 15 years..).
+There are lots of these tools available but I wanted 
+my own. The output is readily useable for the ub_lib
+graphic LCD library (see below).
 
 The tools use perl, because that's what I know, works
 at least on every linux system, and the installation
@@ -96,12 +90,14 @@ project (e.g. bilder dir within ub_lib).
 You can pass bin2hex.pl any binary file you like, it is not especially
 designed for bmp files.
 
-The resulting C-file follows the layout of the C files for the lib
-stm32_ub_graphic by admin_ub (http://mikrocontroller.bplaced.net/wordpress/?page_id=744)
-and can be readily used with this lib.
+By default, the resulting C file uses a generic layout. By uncommenting
+the include and the struct type, you can use it directly with ub_lib
+for graphic LCDs 
+
+(see stm32_ub_graphic by admin_ub (http://mikrocontroller.bplaced.net/wordpress/?page_id=744)
 
 If you require a different layout for your C file, you can easily adapt the 
-here documents in the script or the resulting C file.
+here documents in the perl script or the resulting C file.
 
 The script does no size or range checks and has only been tested with 
 relatively small bmp files.

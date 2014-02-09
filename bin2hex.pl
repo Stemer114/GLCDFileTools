@@ -41,9 +41,10 @@ print <<"END";
 //--------------------------------------------------------------
 // Includes
 //--------------------------------------------------------------
-// ub graphic LCD library
+// enable for usage in ub_lib graphic LCD Library
 // see http://mikrocontroller.bplaced.net/wordpress/?page_id=744
-#include "../stm32_ub_graphic.h"
+// (and enable ub_lib struct below as well)
+//#include "../stm32_ub_graphic.h"
 
 //--------------------------------------------------------------
 // source file: $in
@@ -69,7 +70,8 @@ print "};\n";
 # print c-structure for array access
 print <<END;
 
-UB_Picture ${name} = {
+//UB_Picture ${name} = {
+struct ${name} = {
   ${name}_Table,       // binary data
   $bin_length,   // number of payload bytes
 };
